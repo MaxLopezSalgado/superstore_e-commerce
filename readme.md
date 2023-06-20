@@ -80,8 +80,4 @@ In this project, we perform an end-to-end analysis of the Superstore dataset. Th
 - List any references or resources used during the project.
 
 ## Colaborators
-- Your Name
-
----
-
-Note: The above template serves as a general guide for conducting an end-to-end analysis project. The specific steps and techniques may vary depending on the dataset and problem domain. Feel free to adapt and customize the template as per your requirements.
+- Maximiliano Lopez Salgado
