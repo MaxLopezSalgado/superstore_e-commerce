@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this project, we perform an end-to-end analysis of the "xxxxx" dataset. The project consists of three main phases: Exploratory Data Analysis (EDA), Data Wrangling, and Machine Learning. We aim to gain insights into the data, preprocess it for modeling, and train a machine learning model to make predictions.
+In this project, we perform an end-to-end analysis of the Superstore dataset. The project consists of three main phases: Exploratory Data Analysis (EDA), Data Wrangling, and Machine Learning. We aim to gain insights into the data, preprocess it for modeling, and train a machine learning model to make predictions.
 
 ## Phase 1: Exploratory Data Analysis (EDA)
 
