@@ -1,1 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/maximilianolopezsalgado/data_projects/superstore_e-commerce/sql-eda/demo.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1559"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,5:mainstock"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="customer" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="51"/><column index="2" value="105"/><column index="3" value="190"/><column index="4" value="111"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="stock" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="51"/><column index="2" value="148"/><column index="3" value="166"/><column index="4" value="73"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1"></sql><current_tab id="0"/></tab_sql></sqlb_project>
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/maximilianolopezsalgado/data_projects/superstore_e-commerce/sql-eda/demo.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1559"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,5:mainstock"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="customer" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="51"/><column index="2" value="105"/><column index="3" value="190"/><column index="4" value="111"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="stock" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="51"/><column index="2" value="148"/><column index="3" value="166"/><column index="4" value="73"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">
+-- Questions:
+-- What is the category generating the maximum sales revenue?
+
+-- What about the profit in this category?
+-- Are they making a loss in any categroies?
+--  What are 5 states generating the maximum and minimum sales revenue?
+
+-- What are the 3 products in each product segment with the highest sales?
+
+-- Are they the 3 most profitable products as well?
+-- What are the 3 best-seller products in each product segment? (Quantity-wise)
+
+-- What are the top 3 worst-selling products in every category? (Quantity-wise)
+
+-- How many unique customers per month are there for the year 2016. (There's a catch here: contrary to other 'heavier' RDBMS, SQLite does not support the functions YEAR() or MONTH() to extract the year or the month in a date. You will have to create two new columns: year and month.)
+
+-- Learning Objectives:
+
+-- Review previous SQL knowledge
+-- SQL Window functions and PARTITION BY clause</sql><current_tab id="0"/></tab_sql></sqlb_project>
