@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/maximilianolopezsalgado/data_projects/superstore_e-commerce/sql-eda/superstore_db.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2988"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:mainproduct"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">-- Create the tables in which you will input the values with python in the next step
+CREATE TABLE &quot;product&quot; (
+	&quot;product_id&quot; TEXT PRIMARY KEY,
+	&quot;category&quot; TEXT,
+	&quot;sub_category&quot; TEXT,
+	&quot;product_name&quot; TEXT
+);
+
+CREATE TABLE &quot;sale&quot; (
+	&quot;transaction_id&quot; INTEGER PRIMARY KEY AUTOINCREMENT,
+	&quot;price&quot; REAL,
+	&quot;quantity&quot; INTEGER,
+	&quot;discount&quot; REAL,
+	&quot;profit&quot; REAL
+);
+
+CREATE TABLE &quot;customer&quot; (
+	&quot;customer_id&quot; TEXT PRIMARY KEY,
+	&quot;customer_name&quot; TEXT,
+	&quot;segment&quot; TEXT
+);
+
+CREATE TABLE &quot;geolocation&quot; (
+	&quot;geolocation_id&quot; INTEGER PRIMARY KEY AUTOINCREMENT,
+	&quot;country&quot; TEXT,
+	&quot;city&quot; TEXT,
+	&quot;state&quot; TEXT,
+	&quot;postal_code&quot; INTEGER,
+	&quot;region&quot; TEXT
+);
+
+CREATE TABLE &quot;shipment&quot; (
+	&quot;ship_id&quot; INTEGER PRIMARY KEY,
+	&quot;ship_date&quot; TEXT,
+	&quot;ship_mode&quot; TEXT,
+	&quot;geolocation_number&quot; INTEGER,
+	FOREIGN KEY(&quot;geolocation_number&quot;) REFERENCES &quot;geolocation&quot;(&quot;geolocation_id&quot;)
+);
+
+CREATE TABLE &quot;order&quot; (
+	&quot;order_id&quot; TEXT PRIMARY KEY,
+	&quot;order_date&quot; TEXT,
+	&quot;shipment_code&quot; INTEGER,
+	&quot;customer_code&quot; TEXT,
+	&quot;product_code&quot; TEXT,
+	FOREIGN KEY(&quot;shipment_code&quot;) REFERENCES &quot;shipment&quot;(&quot;ship_id&quot;),
+	FOREIGN KEY(&quot;product_code&quot;) REFERENCES &quot;product&quot;(&quot;product_id&quot;),
+	FOREIGN KEY(&quot;customer_code&quot;) REFERENCES &quot;customer&quot;(&quot;customer_id&quot;)
+);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
