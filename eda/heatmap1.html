@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_570561827ff6bdfb8527b766fe7e5ed9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_570561827ff6bdfb8527b766fe7e5ed9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_570561827ff6bdfb8527b766fe7e5ed9 = L.map(
+                "map_570561827ff6bdfb8527b766fe7e5ed9",
+                {
+                    center: [39.18786550380514, -98.93578850412071],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_292b10578606d0a20059e33e63ec847e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var marker_6fbdcd093fa742cff1fa68730925fda2 = L.marker(
+                [34.0536909, -118.242766],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_3f806f3c90ad3b0950277d959bd7fc86 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_6fbdcd093fa742cff1fa68730925fda2.setIcon(icon_3f806f3c90ad3b0950277d959bd7fc86);
+        
+    
+        var popup_14d6938a91d62978011fbf83f774c9ed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7adff1a81f34b80a61acc1d3cadb5e70 = $(`<div id="html_7adff1a81f34b80a61acc1d3cadb5e70" style="width: 100.0%; height: 100.0%;">Los Angeles<br>Order Count: 747<br>Total Sales: 175851.34100000001</div>`)[0];
+                popup_14d6938a91d62978011fbf83f774c9ed.setContent(html_7adff1a81f34b80a61acc1d3cadb5e70);
+            
+        
+
+        marker_6fbdcd093fa742cff1fa68730925fda2.bindPopup(popup_14d6938a91d62978011fbf83f774c9ed)
+        ;
+
+        
+    
+    
+            var marker_0b92d96a575dce44d28b679d6fb996bc = L.marker(
+                [32.7762719, -96.7968559],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_f0b3b7052baa4dd6752e70f58359ce91 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_0b92d96a575dce44d28b679d6fb996bc.setIcon(icon_f0b3b7052baa4dd6752e70f58359ce91);
+        
+    
+        var popup_241a064b02970e5a0ea9f5c3a27becca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_877b7d2a7293a6be4523cc572da27028 = $(`<div id="html_877b7d2a7293a6be4523cc572da27028" style="width: 100.0%; height: 100.0%;">Dallas<br>Order Count: 157<br>Total Sales: 20131.9322</div>`)[0];
+                popup_241a064b02970e5a0ea9f5c3a27becca.setContent(html_877b7d2a7293a6be4523cc572da27028);
+            
+        
+
+        marker_0b92d96a575dce44d28b679d6fb996bc.bindPopup(popup_241a064b02970e5a0ea9f5c3a27becca)
+        ;
+
+        
+    
+    
+            var marker_64d96eba03124902f47c3aba2baf9cd5 = L.marker(
+                [42.2416466, -84.425589],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_2d12063ed04f2de127004cd81c2e6d67 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_64d96eba03124902f47c3aba2baf9cd5.setIcon(icon_2d12063ed04f2de127004cd81c2e6d67);
+        
+    
+        var popup_3a3c1843d8ad2ca6eb07a5a3925394f7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ab56e07718dd1ab6313ffb491db5e614 = $(`<div id="html_ab56e07718dd1ab6313ffb491db5e614" style="width: 100.0%; height: 100.0%;">Jackson<br>Order Count: 38<br>Total Sales: 15420.036</div>`)[0];
+                popup_3a3c1843d8ad2ca6eb07a5a3925394f7.setContent(html_ab56e07718dd1ab6313ffb491db5e614);
+            
+        
+
+        marker_64d96eba03124902f47c3aba2baf9cd5.bindPopup(popup_3a3c1843d8ad2ca6eb07a5a3925394f7)
+        ;
+
+        
+    
+    
+            var marker_272529b4d5a34a80c7d345ee0f05b040 = L.marker(
+                [40.9312099, -73.8987469],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_3dd1ae2da84e07f345c609f1a049ec3f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_272529b4d5a34a80c7d345ee0f05b040.setIcon(icon_3dd1ae2da84e07f345c609f1a049ec3f);
+        
+    
+        var popup_faf51c13068f11a64ba0b57cad4f216c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_02e4c8113c7ccb88cdde4f2d853607a3 = $(`<div id="html_02e4c8113c7ccb88cdde4f2d853607a3" style="width: 100.0%; height: 100.0%;">Yonkers<br>Order Count: 15<br>Total Sales: 7657.666</div>`)[0];
+                popup_faf51c13068f11a64ba0b57cad4f216c.setContent(html_02e4c8113c7ccb88cdde4f2d853607a3);
+            
+        
+
+        marker_272529b4d5a34a80c7d345ee0f05b040.bindPopup(popup_faf51c13068f11a64ba0b57cad4f216c)
+        ;
+
+        
+    
+    
+            var marker_69df817def0ed404db2ad52115ed6605 = L.marker(
+                [39.7136754, -82.5993294],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_95c9aeb2b65d18a5ab0e5e2651a255af = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_69df817def0ed404db2ad52115ed6605.setIcon(icon_95c9aeb2b65d18a5ab0e5e2651a255af);
+        
+    
+        var popup_305fd7b3c8b16c00d3d60504c1556c08 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ea3781f5e0ce157b4b1af17e5c6e645 = $(`<div id="html_5ea3781f5e0ce157b4b1af17e5c6e645" style="width: 100.0%; height: 100.0%;">Lancaster<br>Order Count: 31<br>Total Sales: 8202.625</div>`)[0];
+                popup_305fd7b3c8b16c00d3d60504c1556c08.setContent(html_5ea3781f5e0ce157b4b1af17e5c6e645);
+            
+        
+
+        marker_69df817def0ed404db2ad52115ed6605.bindPopup(popup_305fd7b3c8b16c00d3d60504c1556c08)
+        ;
+
+        
+    
+    
+            var marker_3fba60649df221e096bc1c75ac0a6faf = L.marker(
+                [40.4167022, -86.8752869],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_8a008bd31f8c3ccee0977655e8eafae0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_3fba60649df221e096bc1c75ac0a6faf.setIcon(icon_8a008bd31f8c3ccee0977655e8eafae0);
+        
+    
+        var popup_9bc09fa7b1addd5dd72f57263f7c6347 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5169036206359ecd0de2fddaf9e7699f = $(`<div id="html_5169036206359ecd0de2fddaf9e7699f" style="width: 100.0%; height: 100.0%;">Lafayette<br>Order Count: 12<br>Total Sales: 19630.45</div>`)[0];
+                popup_9bc09fa7b1addd5dd72f57263f7c6347.setContent(html_5169036206359ecd0de2fddaf9e7699f);
+            
+        
+
+        marker_3fba60649df221e096bc1c75ac0a6faf.bindPopup(popup_9bc09fa7b1addd5dd72f57263f7c6347)
+        ;
+
+        
+    
+    
+            var marker_e39324da23b9ec581b48472de3c1f7aa = L.marker(
+                [32.7174202, -117.1627728],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_e73c083b76c0f0785741ca51f9dec051 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e39324da23b9ec581b48472de3c1f7aa.setIcon(icon_e73c083b76c0f0785741ca51f9dec051);
+        
+    
+        var popup_f23988dbe060d88d878394569279d395 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e06ac4f9bffe6d0ed1e22305146142f = $(`<div id="html_3e06ac4f9bffe6d0ed1e22305146142f" style="width: 100.0%; height: 100.0%;">San Diego<br>Order Count: 170<br>Total Sales: 47521.029</div>`)[0];
+                popup_f23988dbe060d88d878394569279d395.setContent(html_3e06ac4f9bffe6d0ed1e22305146142f);
+            
+        
+
+        marker_e39324da23b9ec581b48472de3c1f7aa.bindPopup(popup_f23988dbe060d88d878394569279d395)
+        ;
+
+        
+    
+    
+            var marker_24f1d00f630ffafda9fb516caa8439e0 = L.marker(
+                [40.5885508, -73.6582631],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_7504eefa4d352049861a57efea39090a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_24f1d00f630ffafda9fb516caa8439e0.setIcon(icon_7504eefa4d352049861a57efea39090a);
+        
+    
+        var popup_ba63bbe420b3a0ed08a58daee7043270 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c8ce5dcbd641fdf1239498f936c8d0e6 = $(`<div id="html_c8ce5dcbd641fdf1239498f936c8d0e6" style="width: 100.0%; height: 100.0%;">Long Beach<br>Order Count: 34<br>Total Sales: 8521.2</div>`)[0];
+                popup_ba63bbe420b3a0ed08a58daee7043270.setContent(html_c8ce5dcbd641fdf1239498f936c8d0e6);
+            
+        
+
+        marker_24f1d00f630ffafda9fb516caa8439e0.bindPopup(popup_ba63bbe420b3a0ed08a58daee7043270)
+        ;
+
+        
+    
+    
+            var marker_924b0440fd568f2cff00596c54b8d264 = L.marker(
+                [33.4484367, -112.074141],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_4042b0746145529e5554cad2f3852cf6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_924b0440fd568f2cff00596c54b8d264.setIcon(icon_4042b0746145529e5554cad2f3852cf6);
+        
+    
+        var popup_a8af27836557c0bbfd83d04a8e5aa9e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1cb3142e4855a06985df4593a2065e7 = $(`<div id="html_c1cb3142e4855a06985df4593a2065e7" style="width: 100.0%; height: 100.0%;">Phoenix<br>Order Count: 63<br>Total Sales: 11000.257</div>`)[0];
+                popup_a8af27836557c0bbfd83d04a8e5aa9e6.setContent(html_c1cb3142e4855a06985df4593a2065e7);
+            
+        
+
+        marker_924b0440fd568f2cff00596c54b8d264.bindPopup(popup_a8af27836557c0bbfd83d04a8e5aa9e6)
+        ;
+
+        
+    
+    
+            var marker_521024f37443d969033ddee368edc0f8 = L.marker(
+                [30.3321838, -81.655651],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_9f4aa24e01c62e52c6cd9164e4fb2657 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_521024f37443d969033ddee368edc0f8.setIcon(icon_9f4aa24e01c62e52c6cd9164e4fb2657);
+        
+    
+        var popup_a0a7477dc0e34f027519c25a7dd204ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2356af915c68989c4cc7e4b4c9da0550 = $(`<div id="html_2356af915c68989c4cc7e4b4c9da0550" style="width: 100.0%; height: 100.0%;">Jacksonville<br>Order Count: 75<br>Total Sales: 39133.328</div>`)[0];
+                popup_a0a7477dc0e34f027519c25a7dd204ce.setContent(html_2356af915c68989c4cc7e4b4c9da0550);
+            
+        
+
+        marker_521024f37443d969033ddee368edc0f8.bindPopup(popup_a0a7477dc0e34f027519c25a7dd204ce)
+        ;
+
+        
+    
+    
+            var marker_6b603430e692e2727190ce04171c04e5 = L.marker(
+                [30.7235263, -95.5507771],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_c6a1ae0cf342216bbb61b8935c34e94a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_6b603430e692e2727190ce04171c04e5.setIcon(icon_c6a1ae0cf342216bbb61b8935c34e94a);
+        
+    
+        var popup_fb48cb9dd2c42469932091c804e532e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_72263d450f4532bb24da8ffbc853af7d = $(`<div id="html_72263d450f4532bb24da8ffbc853af7d" style="width: 100.0%; height: 100.0%;">Huntsville<br>Order Count: 26<br>Total Sales: 6710.6168</div>`)[0];
+                popup_fb48cb9dd2c42469932091c804e532e3.setContent(html_72263d450f4532bb24da8ffbc853af7d);
+            
+        
+
+        marker_6b603430e692e2727190ce04171c04e5.bindPopup(popup_fb48cb9dd2c42469932091c804e532e3)
+        ;
+
+        
+    
+    
+            var marker_1d5d65197e20a320b8cbf9f7ea22142e = L.marker(
+                [38.7767435, -77.1807019310668],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_f1fa4e67b5856e6fb8c5c057f6b50e5d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_1d5d65197e20a320b8cbf9f7ea22142e.setIcon(icon_f1fa4e67b5856e6fb8c5c057f6b50e5d);
+        
+    
+        var popup_2b5c01c7b696955bb6c04dee35094411 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f5294d2899ba247c50fbc309cbe23210 = $(`<div id="html_f5294d2899ba247c50fbc309cbe23210" style="width: 100.0%; height: 100.0%;">Springfield<br>Order Count: 50<br>Total Sales: 16628.53</div>`)[0];
+                popup_2b5c01c7b696955bb6c04dee35094411.setContent(html_f5294d2899ba247c50fbc309cbe23210);
+            
+        
+
+        marker_1d5d65197e20a320b8cbf9f7ea22142e.bindPopup(popup_2b5c01c7b696955bb6c04dee35094411)
+        ;
+
+        
+    
+    
+            var marker_77433c0773273127913881afa9fefdf7 = L.marker(
+                [41.7571701, -88.3147539],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_a809f90b175af791d613fa33125e4fd3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_77433c0773273127913881afa9fefdf7.setIcon(icon_a809f90b175af791d613fa33125e4fd3);
+        
+    
+        var popup_7dc18c41a34499192180ce8f61a1a0ee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_09e22cacfcce336cf8844699fb9467c0 = $(`<div id="html_09e22cacfcce336cf8844699fb9467c0" style="width: 100.0%; height: 100.0%;">Aurora<br>Order Count: 34<br>Total Sales: 7572.968</div>`)[0];
+                popup_7dc18c41a34499192180ce8f61a1a0ee.setContent(html_09e22cacfcce336cf8844699fb9467c0);
+            
+        
+
+        marker_77433c0773273127913881afa9fefdf7.bindPopup(popup_7dc18c41a34499192180ce8f61a1a0ee)
+        ;
+
+        
+    
+    
+            var marker_16ce8df0758cac8105d49e8322787b33 = L.marker(
+                [36.2005843, -115.121584],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_3f0034617c4ddc9f0de181b504365bdd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_16ce8df0758cac8105d49e8322787b33.setIcon(icon_3f0034617c4ddc9f0de181b504365bdd);
+        
+    
+        var popup_a9bcd4b5cb6a32770ee6eaf005f2c650 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ab0236f587421a013cf111ef7b68cc21 = $(`<div id="html_ab0236f587421a013cf111ef7b68cc21" style="width: 100.0%; height: 100.0%;">North Las Vegas<br>Order Count: 16<br>Total Sales: 9801.002</div>`)[0];
+                popup_a9bcd4b5cb6a32770ee6eaf005f2c650.setContent(html_ab0236f587421a013cf111ef7b68cc21);
+            
+        
+
+        marker_16ce8df0758cac8105d49e8322787b33.bindPopup(popup_a9bcd4b5cb6a32770ee6eaf005f2c650)
+        ;
+
+        
+    
+    
+            var marker_0a30ed332d548d616fbaf2f92aa14d03 = L.marker(
+                [42.8867166, -78.8783922],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_d93797c1e09308e022f341cab0c35d94 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_0a30ed332d548d616fbaf2f92aa14d03.setIcon(icon_d93797c1e09308e022f341cab0c35d94);
+        
+    
+        var popup_6f40edbd17f0bdf4c02c642a0736063d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_054afd3d541013fba2df5c8dc48b6e7d = $(`<div id="html_054afd3d541013fba2df5c8dc48b6e7d" style="width: 100.0%; height: 100.0%;">Buffalo<br>Order Count: 10<br>Total Sales: 9063.496</div>`)[0];
+                popup_6f40edbd17f0bdf4c02c642a0736063d.setContent(html_054afd3d541013fba2df5c8dc48b6e7d);
+            
+        
+
+        marker_0a30ed332d548d616fbaf2f92aa14d03.bindPopup(popup_6f40edbd17f0bdf4c02c642a0736063d)
+        ;
+
+        
+    
+    
+            var marker_dddf8e3624fe68c2c14e229a78c67b33 = L.marker(
+                [36.0956918, -79.4377991],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_79deb8727e10fc0d0b162ae042d4ef6a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_dddf8e3624fe68c2c14e229a78c67b33.setIcon(icon_79deb8727e10fc0d0b162ae042d4ef6a);
+        
+    
+        var popup_4edee05f9b730b58729e296c5d32141f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8efaec841ad77d7a99daf292013a329a = $(`<div id="html_8efaec841ad77d7a99daf292013a329a" style="width: 100.0%; height: 100.0%;">Burlington<br>Order Count: 11<br>Total Sales: 12681.282</div>`)[0];
+                popup_4edee05f9b730b58729e296c5d32141f.setContent(html_8efaec841ad77d7a99daf292013a329a);
+            
+        
+
+        marker_dddf8e3624fe68c2c14e229a78c67b33.bindPopup(popup_4edee05f9b730b58729e296c5d32141f)
+        ;
+
+        
+    
+    
+            var marker_3d8c26320c9ec651a95b1109c1b22b4e = L.marker(
+                [41.8239891, -71.4128343],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_be02c53f0ba0b968ceabda472734743e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_3d8c26320c9ec651a95b1109c1b22b4e.setIcon(icon_be02c53f0ba0b968ceabda472734743e);
+        
+    
+        var popup_4aceeb4c74b8483b56198569de839623 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6f53734e008a58976328583eb274f2ce = $(`<div id="html_6f53734e008a58976328583eb274f2ce" style="width: 100.0%; height: 100.0%;">Providence<br>Order Count: 31<br>Total Sales: 15980.65</div>`)[0];
+                popup_4aceeb4c74b8483b56198569de839623.setContent(html_6f53734e008a58976328583eb274f2ce);
+            
+        
+
+        marker_3d8c26320c9ec651a95b1109c1b22b4e.bindPopup(popup_4aceeb4c74b8483b56198569de839623)
+        ;
+
+        
+    
+    
+            var marker_856673e6087feff893609b2cd4408712 = L.marker(
+                [39.7683331, -86.1583502],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_2b0b1b32fcd158a2f1443d33c56f978f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_856673e6087feff893609b2cd4408712.setIcon(icon_2b0b1b32fcd158a2f1443d33c56f978f);
+        
+    
+        var popup_17b5d0eae4720b1b8131ade61326e4f3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bfb9a4074dd28d443b5c608180dea273 = $(`<div id="html_bfb9a4074dd28d443b5c608180dea273" style="width: 100.0%; height: 100.0%;">Indianapolis<br>Order Count: 23<br>Total Sales: 9306.42</div>`)[0];
+                popup_17b5d0eae4720b1b8131ade61326e4f3.setContent(html_bfb9a4074dd28d443b5c608180dea273);
+            
+        
+
+        marker_856673e6087feff893609b2cd4408712.bindPopup(popup_17b5d0eae4720b1b8131ade61326e4f3)
+        ;
+
+        
+    
+    
+            var marker_33dc9b151485a2f6e0b40e7429cbbd25 = L.marker(
+                [43.0349931, -87.922497],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_252b9ace8230df114786dce433c8a666 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_33dc9b151485a2f6e0b40e7429cbbd25.setIcon(icon_252b9ace8230df114786dce433c8a666);
+        
+    
+        var popup_3d01d28c68207cdd8e3831a99881fca5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aaf019e840bc6ee18964145d35c95f33 = $(`<div id="html_aaf019e840bc6ee18964145d35c95f33" style="width: 100.0%; height: 100.0%;">Milwaukee<br>Order Count: 45<br>Total Sales: 11410.22</div>`)[0];
+                popup_3d01d28c68207cdd8e3831a99881fca5.setContent(html_aaf019e840bc6ee18964145d35c95f33);
+            
+        
+
+        marker_33dc9b151485a2f6e0b40e7429cbbd25.bindPopup(popup_3d01d28c68207cdd8e3831a99881fca5)
+        ;
+
+        
+    
+    
+            var marker_cfb115d4cb1050619c21e13b8904b26f = L.marker(
+                [32.3086744, -90.1983063],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_695659f4d52fd041c82f7f8450e23b22 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_cfb115d4cb1050619c21e13b8904b26f.setIcon(icon_695659f4d52fd041c82f7f8450e23b22);
+        
+    
+        var popup_a7cab44f8385ab6b26c90c93362bdc63 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_84e0693ec966d523373f9ed8fee1cec0 = $(`<div id="html_84e0693ec966d523373f9ed8fee1cec0" style="width: 100.0%; height: 100.0%;">Jackson<br>Order Count: 34<br>Total Sales: 7426.61</div>`)[0];
+                popup_a7cab44f8385ab6b26c90c93362bdc63.setContent(html_84e0693ec966d523373f9ed8fee1cec0);
+            
+        
+
+        marker_cfb115d4cb1050619c21e13b8904b26f.bindPopup(popup_a7cab44f8385ab6b26c90c93362bdc63)
+        ;
+
+        
+    
+    
+            var marker_434eff6ac1c36427b6304b16af6b8db1 = L.marker(
+                [38.5810606, -121.493895],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_b9ecb79df378e8b270bd536890da2795 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_434eff6ac1c36427b6304b16af6b8db1.setIcon(icon_b9ecb79df378e8b270bd536890da2795);
+        
+    
+        var popup_27e2c81f2a8ee3a4571135907b758429 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c65e295e36d3af2b211a9f2cd32ea08 = $(`<div id="html_0c65e295e36d3af2b211a9f2cd32ea08" style="width: 100.0%; height: 100.0%;">Sacramento<br>Order Count: 13<br>Total Sales: 7311.278</div>`)[0];
+                popup_27e2c81f2a8ee3a4571135907b758429.setContent(html_0c65e295e36d3af2b211a9f2cd32ea08);
+            
+        
+
+        marker_434eff6ac1c36427b6304b16af6b8db1.bindPopup(popup_27e2c81f2a8ee3a4571135907b758429)
+        ;
+
+        
+    
+    
+            var marker_990ad174289e271745d6160cc6e58649 = L.marker(
+                [38.8769326, -77.0893094],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_8fc957ca7f352ec0e05dc0596fa270a1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_990ad174289e271745d6160cc6e58649.setIcon(icon_8fc957ca7f352ec0e05dc0596fa270a1);
+        
+    
+        var popup_a7dc9e7179ab6eba4654f555f3f33d5a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f6f73a195262fc24ba51e5f81108af09 = $(`<div id="html_f6f73a195262fc24ba51e5f81108af09" style="width: 100.0%; height: 100.0%;">Arlington<br>Order Count: 32<br>Total Sales: 14366.76</div>`)[0];
+                popup_a7dc9e7179ab6eba4654f555f3f33d5a.setContent(html_f6f73a195262fc24ba51e5f81108af09);
+            
+        
+
+        marker_990ad174289e271745d6160cc6e58649.bindPopup(popup_a7dc9e7179ab6eba4654f555f3f33d5a)
+        ;
+
+        
+    
+    
+            var marker_238b42ba60933280d2ecee63513dd4a3 = L.marker(
+                [36.7394421, -119.7848307],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_4d265294c01d52ea66e5fa9f9bf9c6fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_238b42ba60933280d2ecee63513dd4a3.setIcon(icon_4d265294c01d52ea66e5fa9f9bf9c6fb);
+        
+    
+        var popup_423a590b67c9238483a5c7a9aff4f4e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d08eb361b3940bf4ec8bd4b3a673da41 = $(`<div id="html_d08eb361b3940bf4ec8bd4b3a673da41" style="width: 100.0%; height: 100.0%;">Fresno<br>Order Count: 26<br>Total Sales: 7888.5285</div>`)[0];
+                popup_423a590b67c9238483a5c7a9aff4f4e6.setContent(html_d08eb361b3940bf4ec8bd4b3a673da41);
+            
+        
+
+        marker_238b42ba60933280d2ecee63513dd4a3.bindPopup(popup_423a590b67c9238483a5c7a9aff4f4e6)
+        ;
+
+        
+    
+    
+            var marker_bacd07bf226035b6d3e70e56d7eadb8c = L.marker(
+                [39.9622601, -83.0007065],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_2a560e5170051bfc0dfd4ad3de044b82 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_bacd07bf226035b6d3e70e56d7eadb8c.setIcon(icon_2a560e5170051bfc0dfd4ad3de044b82);
+        
+    
+        var popup_48dea8d386ec368e04fb4472d09a29d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ef26879f96f823a66bf12f29274c3db2 = $(`<div id="html_ef26879f96f823a66bf12f29274c3db2" style="width: 100.0%; height: 100.0%;">Columbus<br>Order Count: 120<br>Total Sales: 15900.793</div>`)[0];
+                popup_48dea8d386ec368e04fb4472d09a29d3.setContent(html_ef26879f96f823a66bf12f29274c3db2);
+            
+        
+
+        marker_bacd07bf226035b6d3e70e56d7eadb8c.bindPopup(popup_48dea8d386ec368e04fb4472d09a29d3)
+        ;
+
+        
+    
+    
+            var marker_e6f2c2e251c0c87a20eeca7ad4339855 = L.marker(
+                [42.3315509, -83.0466403],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_77d01a48fd73dabb1e4d93773dae668e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e6f2c2e251c0c87a20eeca7ad4339855.setIcon(icon_77d01a48fd73dabb1e4d93773dae668e);
+        
+    
+        var popup_d582da209f29c5be93a013afdfc387fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d8910312684a2477f53311c712b5776 = $(`<div id="html_6d8910312684a2477f53311c712b5776" style="width: 100.0%; height: 100.0%;">Detroit<br>Order Count: 115<br>Total Sales: 42446.944</div>`)[0];
+                popup_d582da209f29c5be93a013afdfc387fa.setContent(html_6d8910312684a2477f53311c712b5776);
+            
+        
+
+        marker_e6f2c2e251c0c87a20eeca7ad4339855.bindPopup(popup_d582da209f29c5be93a013afdfc387fa)
+        ;
+
+        
+    
+    
+            var marker_74d1ebe403666918a256d26ecc901c19 = L.marker(
+                [37.1968298, -93.2946576],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_df6afe17d45bd5961a1c51ea69ab2244 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_74d1ebe403666918a256d26ecc901c19.setIcon(icon_df6afe17d45bd5961a1c51ea69ab2244);
+        
+    
+        var popup_6d4e457aeaae3eb7e8843f9782198490 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b7cb3cf5bd883038628040125b6d1106 = $(`<div id="html_b7cb3cf5bd883038628040125b6d1106" style="width: 100.0%; height: 100.0%;">Springfield<br>Order Count: 39<br>Total Sales: 15051.380000000001</div>`)[0];
+                popup_6d4e457aeaae3eb7e8843f9782198490.setContent(html_b7cb3cf5bd883038628040125b6d1106);
+            
+        
+
+        marker_74d1ebe403666918a256d26ecc901c19.bindPopup(popup_6d4e457aeaae3eb7e8843f9782198490)
+        ;
+
+        
+    
+    
+            var marker_cb3709a39f5c0904891803e798b5d1e3 = L.marker(
+                [47.6038321, -122.330062],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_42b13e97497e08e389784137e473ca26 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_cb3709a39f5c0904891803e798b5d1e3.setIcon(icon_42b13e97497e08e389784137e473ca26);
+        
+    
+        var popup_6ee7973756b7ba0d864eda8dbbab7b2a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4832a8aa1c178972ecd4534a69faa02c = $(`<div id="html_4832a8aa1c178972ecd4534a69faa02c" style="width: 100.0%; height: 100.0%;">Seattle<br>Order Count: 428<br>Total Sales: 119540.742</div>`)[0];
+                popup_6ee7973756b7ba0d864eda8dbbab7b2a.setContent(html_4832a8aa1c178972ecd4534a69faa02c);
+            
+        
+
+        marker_cb3709a39f5c0904891803e798b5d1e3.bindPopup(popup_6ee7973756b7ba0d864eda8dbbab7b2a)
+        ;
+
+        
+    
+    
+            var marker_4fa133dbc34d3a5b74a5a701148a9116 = L.marker(
+                [37.7478572, -84.2946539],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_d569448e3db214f6f920828694387b02 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4fa133dbc34d3a5b74a5a701148a9116.setIcon(icon_d569448e3db214f6f920828694387b02);
+        
+    
+        var popup_00bc7b32adb0b3f968e5f6ebff7b7257 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e1e826c1d938a17df1ce3f44f55bd57 = $(`<div id="html_4e1e826c1d938a17df1ce3f44f55bd57" style="width: 100.0%; height: 100.0%;">Richmond<br>Order Count: 34<br>Total Sales: 6761.52</div>`)[0];
+                popup_00bc7b32adb0b3f968e5f6ebff7b7257.setContent(html_4e1e826c1d938a17df1ce3f44f55bd57);
+            
+        
+
+        marker_4fa133dbc34d3a5b74a5a701148a9116.bindPopup(popup_00bc7b32adb0b3f968e5f6ebff7b7257)
+        ;
+
+        
+    
+    
+            var marker_f8510a8629e361354f6f052dac4e64e6 = L.marker(
+                [40.0978929, -74.2176435],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_f5f8f6c4312cc707ea3810abd47c239b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f8510a8629e361354f6f052dac4e64e6.setIcon(icon_f5f8f6c4312cc707ea3810abd47c239b);
+        
+    
+        var popup_7be96f737cfef89f502f35475ffe623e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b50c866e5f90f61bccbb8abda629f5e8 = $(`<div id="html_b50c866e5f90f61bccbb8abda629f5e8" style="width: 100.0%; height: 100.0%;">Lakewood<br>Order Count: 24<br>Total Sales: 14852.04</div>`)[0];
+                popup_7be96f737cfef89f502f35475ffe623e.setContent(html_b50c866e5f90f61bccbb8abda629f5e8);
+            
+        
+
+        marker_f8510a8629e361354f6f052dac4e64e6.bindPopup(popup_7be96f737cfef89f502f35475ffe623e)
+        ;
+
+        
+    
+    
+            var marker_c8c190ea016ee9efae3f26e8db44570f = L.marker(
+                [29.4246002, -98.4951405],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_6829bd88972ac04648977c3dedeb7417 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c8c190ea016ee9efae3f26e8db44570f.setIcon(icon_6829bd88972ac04648977c3dedeb7417);
+        
+    
+        var popup_aeadb2dac61bda966790843a5bbb25c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c55b7eaa7d646c707569224e18c30fc1 = $(`<div id="html_c55b7eaa7d646c707569224e18c30fc1" style="width: 100.0%; height: 100.0%;">San Antonio<br>Order Count: 59<br>Total Sales: 21843.528</div>`)[0];
+                popup_aeadb2dac61bda966790843a5bbb25c2.setContent(html_c55b7eaa7d646c707569224e18c30fc1);
+            
+        
+
+        marker_c8c190ea016ee9efae3f26e8db44570f.bindPopup(popup_aeadb2dac61bda966790843a5bbb25c2)
+        ;
+
+        
+    
+    
+            var marker_f41501a4e81a437993f42e05ac3b23e2 = L.marker(
+                [33.8347516, -117.911732],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_abbd6e2c0984b2a901e91cf9acda1c59 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f41501a4e81a437993f42e05ac3b23e2.setIcon(icon_abbd6e2c0984b2a901e91cf9acda1c59);
+        
+    
+        var popup_b5c25f908e43554463b67188a48cc7e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ab4b0e3d408224d26f55196ffedbc983 = $(`<div id="html_ab4b0e3d408224d26f55196ffedbc983" style="width: 100.0%; height: 100.0%;">Anaheim<br>Order Count: 27<br>Total Sales: 7986.87</div>`)[0];
+                popup_b5c25f908e43554463b67188a48cc7e8.setContent(html_ab4b0e3d408224d26f55196ffedbc983);
+            
+        
+
+        marker_f41501a4e81a437993f42e05ac3b23e2.bindPopup(popup_b5c25f908e43554463b67188a48cc7e8)
+        ;
+
+        
+    
+    
+            var marker_5c00afd492c391c87a671fe74a6675a9 = L.marker(
+                [41.8755616, -87.6244212],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_e7792e5b726b87005a76fbb04563d153 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_5c00afd492c391c87a671fe74a6675a9.setIcon(icon_e7792e5b726b87005a76fbb04563d153);
+        
+    
+        var popup_b38e38e6dba674c9d9e721e9c427f5e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5763cfd771f8ade0e8396391bb19a6e7 = $(`<div id="html_5763cfd771f8ade0e8396391bb19a6e7" style="width: 100.0%; height: 100.0%;">Chicago<br>Order Count: 314<br>Total Sales: 48539.541</div>`)[0];
+                popup_b38e38e6dba674c9d9e721e9c427f5e5.setContent(html_5763cfd771f8ade0e8396391bb19a6e7);
+            
+        
+
+        marker_5c00afd492c391c87a671fe74a6675a9.bindPopup(popup_b38e38e6dba674c9d9e721e9c427f5e5)
+        ;
+
+        
+    
+    
+            var marker_e4a7ca1944e90e2182d6cd3933fe7bdc = L.marker(
+                [32.4610708, -84.9880449],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_e7ed79b9e061063d4415ce7455e87cd4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e4a7ca1944e90e2182d6cd3933fe7bdc.setIcon(icon_e7ed79b9e061063d4415ce7455e87cd4);
+        
+    
+        var popup_3488403fe623278e7b25df6c40b6a3ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d5bfdfca6e19cfd692749c7892b389c = $(`<div id="html_3d5bfdfca6e19cfd692749c7892b389c" style="width: 100.0%; height: 100.0%;">Columbus<br>Order Count: 68<br>Total Sales: 14845.05</div>`)[0];
+                popup_3488403fe623278e7b25df6c40b6a3ab.setContent(html_3d5bfdfca6e19cfd692749c7892b389c);
+            
+        
+
+        marker_e4a7ca1944e90e2182d6cd3933fe7bdc.bindPopup(popup_3488403fe623278e7b25df6c40b6a3ab)
+        ;
+
+        
+    
+    
+            var marker_b440db2fb60d7401554d72429de589b5 = L.marker(
+                [29.7589382, -95.3676974],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_b608eef521c5a47e22e1dda68a7f2181 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b440db2fb60d7401554d72429de589b5.setIcon(icon_b608eef521c5a47e22e1dda68a7f2181);
+        
+    
+        var popup_785f89f7829b196a3a9c169f59f7473d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d6f5d2c084fd7c4324da3734442e4b76 = $(`<div id="html_d6f5d2c084fd7c4324da3734442e4b76" style="width: 100.0%; height: 100.0%;">Houston<br>Order Count: 377<br>Total Sales: 64504.7604</div>`)[0];
+                popup_785f89f7829b196a3a9c169f59f7473d.setContent(html_d6f5d2c084fd7c4324da3734442e4b76);
+            
+        
+
+        marker_b440db2fb60d7401554d72429de589b5.bindPopup(popup_785f89f7829b196a3a9c169f59f7473d)
+        ;
+
+        
+    
+    
+            var marker_904cbd3875a745606d7172db68c54264 = L.marker(
+                [38.2542376, -85.759407],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_985baf055dc9bbb1526e8cda87cfda4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_904cbd3875a745606d7172db68c54264.setIcon(icon_985baf055dc9bbb1526e8cda87cfda4e);
+        
+    
+        var popup_30d67201de1b44dd50011a40f5527b93 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_709518cf0d08e353b28c16d772799f73 = $(`<div id="html_709518cf0d08e353b28c16d772799f73" style="width: 100.0%; height: 100.0%;">Louisville<br>Order Count: 33<br>Total Sales: 7275.39</div>`)[0];
+                popup_30d67201de1b44dd50011a40f5527b93.setContent(html_709518cf0d08e353b28c16d772799f73);
+            
+        
+
+        marker_904cbd3875a745606d7172db68c54264.bindPopup(popup_30d67201de1b44dd50011a40f5527b93)
+        ;
+
+        
+    
+    
+            var marker_96d7c6c2377df0f460d7c3f7bb0bb729 = L.marker(
+                [40.7127281, -74.0060152],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_3f449ad4d854c1a5a8e76288ed7dc7b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_96d7c6c2377df0f460d7c3f7bb0bb729.setIcon(icon_3f449ad4d854c1a5a8e76288ed7dc7b9);
+        
+    
+        var popup_e9df97c1b5d52c3b74d4753b928f4ba6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cfdd535d5988852cd508cde85b279b64 = $(`<div id="html_cfdd535d5988852cd508cde85b279b64" style="width: 100.0%; height: 100.0%;">New York City<br>Order Count: 915<br>Total Sales: 256368.161</div>`)[0];
+                popup_e9df97c1b5d52c3b74d4753b928f4ba6.setContent(html_cfdd535d5988852cd508cde85b279b64);
+            
+        
+
+        marker_96d7c6c2377df0f460d7c3f7bb0bb729.bindPopup(popup_e9df97c1b5d52c3b74d4753b928f4ba6)
+        ;
+
+        
+    
+    
+            var marker_f51f2a117236a0c86d8c7280b71072fa = L.marker(
+                [44.4761601, -73.212906],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_45bcc43e3aac2bed41b119d0cf85a6fc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f51f2a117236a0c86d8c7280b71072fa.setIcon(icon_45bcc43e3aac2bed41b119d0cf85a6fc);
+        
+    
+        var popup_89860dcf8fa166ac8bbe3c747c5f0319 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_69814cdca03f9732a1b8c210730cb01b = $(`<div id="html_69814cdca03f9732a1b8c210730cb01b" style="width: 100.0%; height: 100.0%;">Burlington<br>Order Count: 11<br>Total Sales: 8929.369999999999</div>`)[0];
+                popup_89860dcf8fa166ac8bbe3c747c5f0319.setContent(html_69814cdca03f9732a1b8c210730cb01b);
+            
+        
+
+        marker_f51f2a117236a0c86d8c7280b71072fa.bindPopup(popup_89860dcf8fa166ac8bbe3c747c5f0319)
+        ;
+
+        
+    
+    
+            var marker_c81fdc465a71566a22cebf67ba9dc296 = L.marker(
+                [44.9772995, -93.2654692],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_a317bc997f705414910d4cadd7512624 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c81fdc465a71566a22cebf67ba9dc296.setIcon(icon_a317bc997f705414910d4cadd7512624);
+        
+    
+        var popup_a6ffaf641a7c58f64905695af29a913d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_07d4d76208f0570109cc24a5b15d975f = $(`<div id="html_07d4d76208f0570109cc24a5b15d975f" style="width: 100.0%; height: 100.0%;">Minneapolis<br>Order Count: 23<br>Total Sales: 16870.54</div>`)[0];
+                popup_a6ffaf641a7c58f64905695af29a913d.setContent(html_07d4d76208f0570109cc24a5b15d975f);
+            
+        
+
+        marker_c81fdc465a71566a22cebf67ba9dc296.bindPopup(popup_a6ffaf641a7c58f64905695af29a913d)
+        ;
+
+        
+    
+    
+            var marker_e66d5cf8ae848b53eabc024efe04af90 = L.marker(
+                [37.76721, -87.5573742],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_4b986ea2ca12a52d0d09fd65f90328dc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e66d5cf8ae848b53eabc024efe04af90.setIcon(icon_4b986ea2ca12a52d0d09fd65f90328dc);
+        
+    
+        var popup_33372c3ad07260e0ea24d7716f02cb5a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2388719e377c6908bf204a3ed6c436eb = $(`<div id="html_2388719e377c6908bf204a3ed6c436eb" style="width: 100.0%; height: 100.0%;">Henderson<br>Order Count: 48<br>Total Sales: 15661.01</div>`)[0];
+                popup_33372c3ad07260e0ea24d7716f02cb5a.setContent(html_2388719e377c6908bf204a3ed6c436eb);
+            
+        
+
+        marker_e66d5cf8ae848b53eabc024efe04af90.bindPopup(popup_33372c3ad07260e0ea24d7716f02cb5a)
+        ;
+
+        
+    
+    
+            var marker_f91aa8a63f4fe130942b0a12fe362ba0 = L.marker(
+                [30.4380832, -84.2809332],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_2611f350bc5f8b84a9ecf46e44825e88 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f91aa8a63f4fe130942b0a12fe362ba0.setIcon(icon_2611f350bc5f8b84a9ecf46e44825e88);
+        
+    
+        var popup_7741fef2eeb7e57a6cbbb153140b8e43 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3beec4769a3fec6fe0091feaec6a2a8f = $(`<div id="html_3beec4769a3fec6fe0091feaec6a2a8f" style="width: 100.0%; height: 100.0%;">Tallahassee<br>Order Count: 17<br>Total Sales: 7250.669</div>`)[0];
+                popup_7741fef2eeb7e57a6cbbb153140b8e43.setContent(html_3beec4769a3fec6fe0091feaec6a2a8f);
+            
+        
+
+        marker_f91aa8a63f4fe130942b0a12fe362ba0.bindPopup(popup_7741fef2eeb7e57a6cbbb153140b8e43)
+        ;
+
+        
+    
+    
+            var marker_2b6e18c2ace21e2fa41009683edbde7c = L.marker(
+                [39.2014405, -85.9213796],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_441e3de313665b41e4aaf0a1fc6c6a18 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_2b6e18c2ace21e2fa41009683edbde7c.setIcon(icon_441e3de313665b41e4aaf0a1fc6c6a18);
+        
+    
+        var popup_c31febad42dce28e8abe95aaa7af1ae8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee04d5f21ea94f6acab2f21f48b14f78 = $(`<div id="html_ee04d5f21ea94f6acab2f21f48b14f78" style="width: 100.0%; height: 100.0%;">Columbus<br>Order Count: 34<br>Total Sales: 7960.4</div>`)[0];
+                popup_c31febad42dce28e8abe95aaa7af1ae8.setContent(html_ee04d5f21ea94f6acab2f21f48b14f78);
+            
+        
+
+        marker_2b6e18c2ace21e2fa41009683edbde7c.bindPopup(popup_c31febad42dce28e8abe95aaa7af1ae8)
+        ;
+
+        
+    
+    
+            var marker_2bb9db19ca523c8fbd8381e585a16da9 = L.marker(
+                [39.1938429, -76.86460919353361],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_696a5ed156dc054c6772b88025ba661d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_2bb9db19ca523c8fbd8381e585a16da9.setIcon(icon_696a5ed156dc054c6772b88025ba661d);
+        
+    
+        var popup_330c601257c6580466434183acd5c8c4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ecfc6d5d1def2d155baba070cc57eb3 = $(`<div id="html_0ecfc6d5d1def2d155baba070cc57eb3" style="width: 100.0%; height: 100.0%;">Columbia<br>Order Count: 23<br>Total Sales: 10962.35</div>`)[0];
+                popup_330c601257c6580466434183acd5c8c4.setContent(html_0ecfc6d5d1def2d155baba070cc57eb3);
+            
+        
+
+        marker_2bb9db19ca523c8fbd8381e585a16da9.bindPopup(popup_330c601257c6580466434183acd5c8c4)
+        ;
+
+        
+    
+    
+            var marker_45d8cd4b2914e9f83bdbed336167b3a2 = L.marker(
+                [25.7741728, -80.19362],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_f9bbf74ba23b09f1135caaea8470c84e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_45d8cd4b2914e9f83bdbed336167b3a2.setIcon(icon_f9bbf74ba23b09f1135caaea8470c84e);
+        
+    
+        var popup_18f4ccf2347723d97423d322cb130932 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a5dea44817fbaab274af25748501732e = $(`<div id="html_a5dea44817fbaab274af25748501732e" style="width: 100.0%; height: 100.0%;">Miami<br>Order Count: 57<br>Total Sales: 8673.0745</div>`)[0];
+                popup_18f4ccf2347723d97423d322cb130932.setContent(html_a5dea44817fbaab274af25748501732e);
+            
+        
+
+        marker_45d8cd4b2914e9f83bdbed336167b3a2.bindPopup(popup_18f4ccf2347723d97423d322cb130932)
+        ;
+
+        
+    
+    
+            var marker_217ca8c01ffb982e484e81ddb53f0393 = L.marker(
+                [35.2272086, -80.8430827],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_7a82f4019fccb41fc12f6eeb0e4460f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_217ca8c01ffb982e484e81ddb53f0393.setIcon(icon_7a82f4019fccb41fc12f6eeb0e4460f3);
+        
+    
+        var popup_244bd3b3b9f51bd31c09d1a1602be53f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3928463c2df46572fb6b29cfaf07bac2 = $(`<div id="html_3928463c2df46572fb6b29cfaf07bac2" style="width: 100.0%; height: 100.0%;">Charlotte<br>Order Count: 52<br>Total Sales: 13693.339</div>`)[0];
+                popup_244bd3b3b9f51bd31c09d1a1602be53f.setContent(html_3928463c2df46572fb6b29cfaf07bac2);
+            
+        
+
+        marker_217ca8c01ffb982e484e81ddb53f0393.bindPopup(popup_244bd3b3b9f51bd31c09d1a1602be53f)
+        ;
+
+        
+    
+    
+            var marker_4e6bac2757501f52581b4c879be359d0 = L.marker(
+                [39.6828358, -75.7515682],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_67155b1c481a08b4d9c62740b3187d3a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4e6bac2757501f52581b4c879be359d0.setIcon(icon_67155b1c481a08b4d9c62740b3187d3a);
+        
+    
+        var popup_c5b4c0150c674abae39cb4b4b61f02ca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0f4a3eb0d81b3733f4681275f32ef0b0 = $(`<div id="html_0f4a3eb0d81b3733f4681275f32ef0b0" style="width: 100.0%; height: 100.0%;">Newark<br>Order Count: 60<br>Total Sales: 20448.05</div>`)[0];
+                popup_c5b4c0150c674abae39cb4b4b61f02ca.setContent(html_0f4a3eb0d81b3733f4681275f32ef0b0);
+            
+        
+
+        marker_4e6bac2757501f52581b4c879be359d0.bindPopup(popup_c5b4c0150c674abae39cb4b4b61f02ca)
+        ;
+
+        
+    
+    
+            var marker_daf6c3c8dc4aa89b5d2852fa376523bc = L.marker(
+                [39.9527237, -75.1635262],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_8aa786c8ce4ed2a239a5b792cf6cdaa7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_daf6c3c8dc4aa89b5d2852fa376523bc.setIcon(icon_8aa786c8ce4ed2a239a5b792cf6cdaa7);
+        
+    
+        var popup_3c2099e1cbdce14a3ec7c66c8097c8e7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb7ac51539bf84423191265b9fc0af67 = $(`<div id="html_eb7ac51539bf84423191265b9fc0af67" style="width: 100.0%; height: 100.0%;">Philadelphia<br>Order Count: 537<br>Total Sales: 109077.013</div>`)[0];
+                popup_3c2099e1cbdce14a3ec7c66c8097c8e7.setContent(html_eb7ac51539bf84423191265b9fc0af67);
+            
+        
+
+        marker_daf6c3c8dc4aa89b5d2852fa376523bc.bindPopup(popup_3c2099e1cbdce14a3ec7c66c8097c8e7)
+        ;
+
+        
+    
+    
+            var marker_df367d02269480084c31358b5ef359e2 = L.marker(
+                [39.7392364, -104.984862],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_03bb1e4d40d41fa96094ba9741d3960d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_df367d02269480084c31358b5ef359e2.setIcon(icon_03bb1e4d40d41fa96094ba9741d3960d);
+        
+    
+        var popup_f7f5753d3f171dbb06f5e1f6bd8ab7ad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b991f813faa0d299bcf286d0f744d11 = $(`<div id="html_5b991f813faa0d299bcf286d0f744d11" style="width: 100.0%; height: 100.0%;">Denver<br>Order Count: 44<br>Total Sales: 12198.793</div>`)[0];
+                popup_f7f5753d3f171dbb06f5e1f6bd8ab7ad.setContent(html_5b991f813faa0d299bcf286d0f744d11);
+            
+        
+
+        marker_df367d02269480084c31358b5ef359e2.bindPopup(popup_f7f5753d3f171dbb06f5e1f6bd8ab7ad)
+        ;
+
+        
+    
+    
+            var marker_eb2b29a5aa4fa287828c80d88f726c5d = L.marker(
+                [40.0581205, -82.4012643],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_f7fa9d561c7d0e50a3c0ec8348c08475 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_eb2b29a5aa4fa287828c80d88f726c5d.setIcon(icon_f7fa9d561c7d0e50a3c0ec8348c08475);
+        
+    
+        var popup_521e5a857c06fcb2b58a23f9bd4ae580 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b549a64be0ee465d60fe93e5a920bcc = $(`<div id="html_9b549a64be0ee465d60fe93e5a920bcc" style="width: 100.0%; height: 100.0%;">Newark<br>Order Count: 35<br>Total Sales: 8128.0689999999995</div>`)[0];
+                popup_521e5a857c06fcb2b58a23f9bd4ae580.setContent(html_9b549a64be0ee465d60fe93e5a920bcc);
+            
+        
+
+        marker_eb2b29a5aa4fa287828c80d88f726c5d.bindPopup(popup_521e5a857c06fcb2b58a23f9bd4ae580)
+        ;
+
+        
+    
+    
+            var marker_aa41a20acc0f9a8efdc4e0c6488a61fe = L.marker(
+                [33.7489924, -84.3902644],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_1325c1044c641b0fdef584eed9308539 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_aa41a20acc0f9a8efdc4e0c6488a61fe.setIcon(icon_1325c1044c641b0fdef584eed9308539);
+        
+    
+        var popup_ffae7d9cfe83494279352ba4bfb0fe57 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fe32c001e74f30ecc60f723df91831ce = $(`<div id="html_fe32c001e74f30ecc60f723df91831ce" style="width: 100.0%; height: 100.0%;">Atlanta<br>Order Count: 39<br>Total Sales: 17197.84</div>`)[0];
+                popup_ffae7d9cfe83494279352ba4bfb0fe57.setContent(html_fe32c001e74f30ecc60f723df91831ce);
+            
+        
+
+        marker_aa41a20acc0f9a8efdc4e0c6488a61fe.bindPopup(popup_ffae7d9cfe83494279352ba4bfb0fe57)
+        ;
+
+        
+    
+    
+            var marker_b91ca2450eaa8ebc40fa345768535ef9 = L.marker(
+                [37.7790262, -122.419906],
+                {}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+    
+            var icon_97cb756c80f01b38092ce8ce8f8ae6ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "shopping-cart", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b91ca2450eaa8ebc40fa345768535ef9.setIcon(icon_97cb756c80f01b38092ce8ce8f8ae6ce);
+        
+    
+        var popup_f5555afb8aea7c8a93f45b391bdd786a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2e318d92ff964e29d95ea33212f7b24 = $(`<div id="html_c2e318d92ff964e29d95ea33212f7b24" style="width: 100.0%; height: 100.0%;">San Francisco<br>Order Count: 510<br>Total Sales: 112669.092</div>`)[0];
+                popup_f5555afb8aea7c8a93f45b391bdd786a.setContent(html_c2e318d92ff964e29d95ea33212f7b24);
+            
+        
+
+        marker_b91ca2450eaa8ebc40fa345768535ef9.bindPopup(popup_f5555afb8aea7c8a93f45b391bdd786a)
+        ;
+
+        
+    
+    
+            var heat_map_0d1b8f7f09a737f0110168880a57c676 = L.heatLayer(
+                [[34.0536909, -118.242766, 175851.34100000001], [32.7762719, -96.7968559, 20131.9322], [42.2416466, -84.425589, 15420.036], [40.9312099, -73.8987469, 7657.666], [39.7136754, -82.5993294, 8202.625], [40.4167022, -86.8752869, 19630.45], [32.7174202, -117.1627728, 47521.029], [40.5885508, -73.6582631, 8521.2], [33.4484367, -112.074141, 11000.257], [30.3321838, -81.655651, 39133.328], [30.7235263, -95.5507771, 6710.6168], [38.7767435, -77.1807019310668, 16628.53], [41.7571701, -88.3147539, 7572.968], [36.2005843, -115.121584, 9801.002], [42.8867166, -78.8783922, 9063.496], [36.0956918, -79.4377991, 12681.282], [41.8239891, -71.4128343, 15980.65], [39.7683331, -86.1583502, 9306.42], [43.0349931, -87.922497, 11410.22], [32.3086744, -90.1983063, 7426.61], [38.5810606, -121.493895, 7311.278], [38.8769326, -77.0893094, 14366.76], [36.7394421, -119.7848307, 7888.5285], [39.9622601, -83.0007065, 15900.793], [42.3315509, -83.0466403, 42446.944], [37.1968298, -93.2946576, 15051.380000000001], [47.6038321, -122.330062, 119540.742], [37.7478572, -84.2946539, 6761.52], [40.0978929, -74.2176435, 14852.04], [29.4246002, -98.4951405, 21843.528], [33.8347516, -117.911732, 7986.87], [41.8755616, -87.6244212, 48539.541], [32.4610708, -84.9880449, 14845.05], [29.7589382, -95.3676974, 64504.7604], [38.2542376, -85.759407, 7275.39], [40.7127281, -74.0060152, 256368.161], [44.4761601, -73.212906, 8929.369999999999], [44.9772995, -93.2654692, 16870.54], [37.76721, -87.5573742, 15661.01], [30.4380832, -84.2809332, 7250.669], [39.2014405, -85.9213796, 7960.4], [39.1938429, -76.86460919353361, 10962.35], [25.7741728, -80.19362, 8673.0745], [35.2272086, -80.8430827, 13693.339], [39.6828358, -75.7515682, 20448.05], [39.9527237, -75.1635262, 109077.013], [39.7392364, -104.984862, 12198.793], [40.0581205, -82.4012643, 8128.0689999999995], [33.7489924, -84.3902644, 17197.84], [37.7790262, -122.419906, 112669.092]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_570561827ff6bdfb8527b766fe7e5ed9);
+        
+</script>
+</html>
