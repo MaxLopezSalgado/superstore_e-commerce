@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/maximilianolopezsalgado/data_projects/superstore_e-commerce/sql-eda/superstore_db.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1597"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,5:mainorder"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="customer" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="105"/><column index="2" value="190"/><column index="3" value="111"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="order" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="2" mode="1"/></sort><column_widths><column index="1" value="148"/><column index="2" value="101"/><column index="3" value="153"/><column index="4" value="166"/><column index="5" value="112"/><column index="6" value="167"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="product" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="2" mode="0"/></sort><column_widths><column index="1" value="166"/><column index="2" value="132"/><column index="3" value="112"/><column index="4" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="sale" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="96"/><column index="2" value="71"/><column index="3" value="75"/><column index="4" value="102"/><column index="5" value="119"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">-- Questions to answer:
+-- What is the category generating the maximum sales revenue?
+SELECT p.category, SUM(s.price * s.quantity) AS total_revenue
+FROM &quot;order&quot; o
+JOIN product p ON o.product_number = p.product_id
+JOIN sale s ON o.transaction_number = s.transaction_id
+GROUP BY p.category
+ORDER BY total_revenue DESC
+LIMIT 1
+;
+
+-- What about the profit in this category?
+SELECT p.category, SUM(s.profit * s.quantity) AS total_profit
+FROM &quot;order&quot; o
+JOIN product p ON o.product_number = p.product_id
+JOIN sale s ON o.transaction_number = s.transaction_id
+GROUP BY p.category
+ORDER BY total_profit DESC
+LIMIT 1
+;
+
+-- Are they making a loss in any categories?
+SELECT p.category, SUM(s.price * s.quantity - s.profit) AS total_profit
+FROM &quot;order&quot; o
+JOIN product p ON o.product_number = p.product_id
+JOIN sale s ON o.transaction_number = s.transaction_id
+GROUP BY p.category
+HAVING total_profit &lt; 0
+;
+
+-- What are 5 states generating the maximum and minimum sales revenue?
+SELECT g.state, SUM(s.price * s.quantity) AS top5_max_revenue
+FROM &quot;order&quot; o
+JOIN product p ON o.product_number = p.product_id
+JOIN sale s ON o.transaction_number = s.transaction_id
+JOIN shipment sh on o.ship_number = sh.ship_id
+JOIN geolocation g on sh.geolocation_number = g.geolocation_id 
+GROUP BY g.state
+ORDER BY top5_max_revenue DESC
+LIMIT 5
+;
+
+SELECT g.state, SUM(s.price * s.quantity) AS top5_min_revenue
+FROM &quot;order&quot; o
+JOIN product p ON o.product_number = p.product_id
+JOIN sale s ON o.transaction_number = s.transaction_id
+JOIN shipment sh on o.ship_number = sh.ship_id
+JOIN geolocation g on sh.geolocation_number = g.geolocation_id 
+GROUP BY g.state
+ORDER BY top5_min_revenue ASC
+LIMIT 5
+;
+
+-- What are the 3 products in each product segment (CATEGORIES) with the highest sales?
+SELECT
+    p.category,
+	p.&quot;sub-category&quot;,
+    p.product_name,
+    SUM(s.price * s.quantity) AS sales_amount
+FROM
+    product AS p
+    INNER JOIN &quot;order&quot; AS o ON o.product_number = p.product_id
+    INNER JOIN sale AS s ON s.transaction_id = o.transaction_number
+WHERE
+    p.category = 'Technology'
+GROUP BY
+    p.product_id
+ORDER BY
+    sales_amount DESC
+LIMIT 3;
+
+SELECT
+    p.category,
+	p.&quot;sub-category&quot;,
+    p.product_name,
+    SUM(s.price * s.quantity) AS sales_amount
+FROM
+    product AS p
+    INNER JOIN &quot;order&quot; AS o ON o.product_number = p.product_id
+    INNER JOIN sale AS s ON s.transaction_id = o.transaction_number
+WHERE
+    p.category = 'Furniture'
+GROUP BY
+    p.product_id
+ORDER BY
+    sales_amount DESC
+LIMIT 3;
+
+SELECT
+    p.category,
+	p.&quot;sub-category&quot;,
+    p.product_name,
+    SUM(s.price * s.quantity) AS sales_amount
+FROM
+    product AS p
+    INNER JOIN &quot;order&quot; AS o ON o.product_number = p.product_id
+    INNER JOIN sale AS s ON s.transaction_id = o.transaction_number
+WHERE
+    p.category = 'Office Supplies'
+GROUP BY
+    p.product_id
+ORDER BY
+    sales_amount DESC
+LIMIT 3;
+
+-- Are they the 3 most profitable products as well?
+SELECT
+    p.product_name,
+    MAX(s.profit) AS max_profit
+FROM
+    &quot;order&quot; AS o
+    JOIN product AS p ON o.product_number = p.product_id
+    JOIN sale AS s ON o.transaction_number = s.transaction_id
+WHERE
+    p.category = 'Technology'
+GROUP BY
+    p.product_name
+ORDER BY
+    max_profit DESC
+LIMIT 3;
+
+SELECT
+    p.product_name,
+    MAX(s.profit) AS max_profit
+FROM
+    &quot;order&quot; AS o
+    JOIN product AS p ON o.product_number = p.product_id
+    JOIN sale AS s ON o.transaction_number = s.transaction_id
+WHERE
+    p.category = 'Furniture'
+GROUP BY
+    p.product_name
+ORDER BY
+    max_profit DESC
+LIMIT 3;
+
+SELECT
+    p.product_name,
+    MAX(s.profit) AS max_profit
+FROM
+    &quot;order&quot; AS o
+    JOIN product AS p ON o.product_number = p.product_id
+    JOIN sale AS s ON o.transaction_number = s.transaction_id
+WHERE
+    p.category = 'Office Supplies'
+GROUP BY
+    p.product_name
+ORDER BY
+    max_profit DESC
+LIMIT 3;
+
+-- What are the 3 best-seller products in each product segment (CATEGORY)? (Quantity-wise)
+SELECT p.product_name, COUNT(p.product_name) as count_best_sellers
+FROM &quot;order&quot; o
+JOIN product AS p ON o.product_number = p.product_id
+JOIN sale AS s ON o.transaction_number = s.transaction_id
+WHERE p.category = 'Technology'
+GROUP BY p.product_name
+ORDER BY count_best_sellers DESC
+LIMIT 3
+;
+
+SELECT p.product_name, COUNT(p.product_name) as count_best_sellers
+FROM &quot;order&quot; o
+JOIN product AS p ON o.product_number = p.product_id
+JOIN sale AS s ON o.transaction_number = s.transaction_id
+WHERE p.category = 'Furniture'
+GROUP BY p.product_name
+ORDER BY count_best_sellers DESC
+LIMIT 3
+;
+
+SELECT p.product_name, COUNT(p.product_name) as count_best_sellers
+FROM &quot;order&quot; o
+JOIN product AS p ON o.product_number = p.product_id
+JOIN sale AS s ON o.transaction_number = s.transaction_id
+WHERE p.category = 'Office Supplies'
+GROUP BY p.product_name
+ORDER BY count_best_sellers DESC
+LIMIT 3
+;
+
+-- What are the top 3 worst-selling products in every category? (Quantity-wise)
+SELECT p.product_name, COUNT(p.product_name) as count_best_sellers
+FROM &quot;order&quot; o
+JOIN product AS p ON o.product_number = p.product_id
+JOIN sale AS s ON o.transaction_number = s.transaction_id
+WHERE p.category = 'Technology'
+GROUP BY p.product_name
+ORDER BY count_best_sellers ASC
+LIMIT 3
+;
+
+SELECT p.product_name, COUNT(p.product_name) as count_best_sellers
+FROM &quot;order&quot; o
+JOIN product AS p ON o.product_number = p.product_id
+JOIN sale AS s ON o.transaction_number = s.transaction_id
+WHERE p.category = 'Furniture'
+GROUP BY p.product_name
+ORDER BY count_best_sellers ASC
+LIMIT 3
+;
+
+SELECT p.product_name, COUNT(p.product_name) as count_best_sellers
+FROM &quot;order&quot; o
+JOIN product AS p ON o.product_number = p.product_id
+JOIN sale AS s ON o.transaction_number = s.transaction_id
+WHERE p.category = 'Office Supplies'
+GROUP BY p.product_name
+ORDER BY count_best_sellers ASC
+LIMIT 3
+;
+
+-- How many unique customers per month are there for the year 2016. (There's a catch here: contrary to other 'heavier' RDBMS, SQLite does not support the functions YEAR() or MONTH() to extract the year or the month in a date. You will have to create two new columns: year and month.)
+
+-- Add year column
+ALTER TABLE &quot;order&quot; ADD COLUMN year INTEGER;
+
+-- Add month column
+ALTER TABLE &quot;order&quot; ADD COLUMN month INTEGER;
+
+-- Update year and month values
+UPDATE &quot;order&quot; SET year = CAST(SUBSTR(order_date, -4) AS INTEGER);
+UPDATE &quot;order&quot; SET month = CAST(SUBSTR(order_date, 1, INSTR(order_date, '/') - 1) AS INTEGER);
+
+-- count the number of unique customers per month for the year 2016 using a query:
+SELECT month, COUNT(DISTINCT customer_number) AS unique_customers
+FROM &quot;order&quot;
+WHERE year = 2016
+GROUP BY month;
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
